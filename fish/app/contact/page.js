@@ -4,7 +4,7 @@ import FishLogo from "../components/FishLogo";
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.18),_transparent_32%),linear-gradient(135deg,#f0fdf4_0%,#ecfeff_45%,#f8fafc_100%)] text-slate-800">
-      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8 sm:py-12 lg:px-10">
+      <div className="mx-auto max-w-6xl px-5 py-8 sm:px-8 sm:py-12 lg:px-10">
         <header className="mb-10 flex items-center justify-between gap-4 sm:mb-14 sm:gap-6">
           <Link href="/" aria-label="F.I.S.H. home">
             <FishLogo className="h-14 w-32 shrink-0 sm:h-16 sm:w-40" />
@@ -36,7 +36,7 @@ export default function ContactPage() {
             aria-labelledby="contact-details-heading"
             className="w-full rounded-[1.5rem] border border-white/80 bg-white/80 p-4 shadow-[0_20px_60px_rgba(15,23,42,0.10)] backdrop-blur-sm sm:rounded-[2rem] sm:p-9"
           >
-            <div className="mb-8 text-center">
+            <div className="mb-6 text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 sm:text-sm sm:tracking-[0.25em]">
                 Contact details
               </p>
@@ -51,14 +51,14 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-              <table className="w-full table-fixed text-left text-xs sm:text-sm">
+            <div className="mx-auto max-w-md overflow-hidden rounded-2xl border border-slate-200 bg-white">
+              <table className="w-full table-fixed text-left text-xs">
                 <thead className="bg-sky-50 text-xs uppercase tracking-[0.15em] text-sky-800">
                   <tr>
-                    <th scope="col" className="w-2/5 px-3 py-4 font-bold sm:px-5">
+                    <th scope="col" className="w-2/5 px-3 py-2.5 font-bold">
                       Contact
                     </th>
-                    <th scope="col" className="px-3 py-4 font-bold sm:px-5">
+                    <th scope="col" className="px-3 py-2.5 font-bold">
                       Number
                     </th>
                   </tr>
@@ -67,11 +67,11 @@ export default function ContactPage() {
                   <tr className="border-t border-slate-100">
                     <th
                       scope="row"
-                      className="break-words px-3 py-4 font-semibold text-slate-800 sm:px-5 sm:py-5"
+                      className="break-words px-3 py-2.5 font-semibold text-slate-800"
                     >
                       F.I.S.H.
                     </th>
-                    <td className="break-words px-3 py-4 text-slate-600 sm:px-5 sm:py-5">
+                    <td className="break-words px-3 py-2.5 text-slate-600">
                       numbere sanmple
                     </td>
                   </tr>
