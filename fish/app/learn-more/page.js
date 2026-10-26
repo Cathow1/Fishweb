@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import FishLogo from "../components/FishLogo";
 
 const pillars = [
@@ -21,6 +24,8 @@ const pillars = [
 ];
 
 export default function LearnMorePage() {
+  const [selectedPillar, setSelectedPillar] = useState(pillars[0]);
+
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.20),_transparent_30%),linear-gradient(135deg,#f0fdf4_0%,#ecfeff_42%,#f8fafc_100%)] text-slate-800">
       <div className="mx-auto max-w-6xl px-6 py-12 sm:px-8 lg:px-10">
@@ -47,11 +52,11 @@ export default function LearnMorePage() {
             </p>
 
             <h1 className="text-5xl font-black tracking-tight text-slate-900 sm:text-6xl">
-              Focus
+              {selectedPillar.title}
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              Focus is a ministry for Christians who want to grow with Christ, learn deeper truths from His Word, and become fishers of people by sharing the hope of the Gospel with love and purpose.
+              {selectedPillar.text}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -76,16 +81,23 @@ export default function LearnMorePage() {
             </div>
 
             <div className="grid gap-3">
-              {pillars.map(({ title, text }) => (
-                <div
-                  key={title}
-                  className="relative rounded-2xl border border-slate-200 bg-slate-50 p-4 transition duration-200 ease-out hover:z-10 hover:scale-105 hover:border-sky-300 hover:bg-sky-100 hover:shadow-lg motion-reduce:transition-none"
+              {pillars.map((pillar) => (
+                <button
+                  key={pillar.title}
+                  type="button"
+                  aria-pressed={selectedPillar.title === pillar.title}
+                  onClick={() => setSelectedPillar(pillar)}
+                  className={`relative w-full rounded-2xl border p-4 text-left transition duration-200 ease-out hover:z-10 hover:scale-105 hover:border-sky-300 hover:bg-sky-100 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 motion-reduce:transition-none ${
+                    selectedPillar.title === pillar.title
+                      ? "border-sky-300 bg-sky-100 shadow-md"
+                      : "border-slate-200 bg-slate-50"
+                  }`}
                 >
                   <div className="text-sm font-black uppercase tracking-[0.2em] text-sky-700">
-                    {title}
+                    {pillar.title}
                   </div>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
-                </div>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{pillar.text}</p>
+                </button>
               ))}
             </div>
           </div>
