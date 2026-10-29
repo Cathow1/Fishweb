@@ -34,6 +34,24 @@ body {
   box-sizing: border-box;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.site-header::before {
+  position: absolute;
+  inset: 0 auto 0 50%;
+  z-index: -1;
+  width: 100vw;
+  transform: translateX(-50%);
+  border-bottom: 1px solid rgb(226 232 240 / 75%);
+  background: rgb(255 255 255 / 90%);
+  content: "";
+  backdrop-filter: blur(12px);
+}
+
 button,
 [contenteditable="true"] {
   font: inherit;

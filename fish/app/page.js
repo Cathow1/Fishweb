@@ -1,5 +1,5 @@
 import Link from "next/link";
-import FishLogo from "./components/FishLogo";
+import SiteHeader from "./components/SiteHeader";
 import cobeImage from "./assets/cobe.jpeg";
 
 const fishValues = [
@@ -14,30 +14,18 @@ export default function Home() {
     <main
       className="min-h-screen text-slate-800"
       style={{
-        backgroundImage: `radial-gradient(circle at top, rgba(56,189,248,0.2), transparent 30%), linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 30%, rgba(255,255,255,0.42) 62%, rgba(255,255,255,0.12) 100%), url("${cobeImage.src}")`,
-        backgroundSize: "auto, auto, cover",
-        backgroundPosition: "center, center, center",
+        backgroundImage: `radial-gradient(ellipse at top, hsla(224, 75%, 28%, 0.28), transparent 38%), radial-gradient(ellipse 55% 75% at right center, hsla(224, 75%, 28%, 0.38), transparent 100%), linear-gradient(to right, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 30%, rgba(255,255,255,0.42) 62%, rgba(255,255,255,0.12) 100%), url("${cobeImage.src}")`,
+        backgroundSize: "auto, auto, auto, cover",
+        backgroundPosition: "center, center, center, center",
         backgroundAttachment: "scroll",
       }}
     >
       <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-12 lg:px-10">
-        <header className="mb-8 flex flex-col items-start gap-3 sm:mb-10 sm:flex-row sm:items-center">
-          <div className="flex w-full items-center gap-2 sm:gap-3">
-            <FishLogo
-              className="h-14 w-32 shrink-0 sm:h-16 sm:w-40"
-              style={{ objectFit: "contain" }}
-              draggable={false}
-            />
-            <span className="min-w-0 text-sm font-semibold tracking-[0.1em] text-slate-700 sm:text-lg sm:tracking-[0.25em]">
-              Focus, Inspire, Share & Hook
-            </span>
-          </div>
-
-        </header>
+        <SiteHeader className="mb-8 sm:mb-10" />
 
         <section className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-end gap-3 sm:gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
           <div className="min-w-0">
-            <p className="mb-3 text-[0.6rem] font-semibold uppercase leading-5 tracking-[0.12em] text-sky-700 sm:mb-4 sm:text-sm sm:tracking-[0.35em]">
+            <p className="mb-3 text-[0.6rem] font-semibold uppercase leading-5 tracking-[0.12em] text-[#315b8e] sm:mb-4 sm:text-sm sm:tracking-[0.35em]">
               Focus. Inspire. Share. Hook.
             </p>
 
@@ -45,20 +33,23 @@ export default function Home() {
               F.I.S.H
             </h1>
 
-            <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
-              Mark 1:17: &quot;Come, follow me, and I will show you how to fish for people&quot;
+            <p className="mt-3 flex max-w-xl gap-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
+              <span aria-hidden="true" className="w-1 shrink-0 rounded-full bg-[#315b8e]" />
+              <span>
+                Mark 1:17: &quot;Come, follow me, and I will show you how to fish for people&quot;
+              </span>
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2 sm:mt-8 sm:gap-4">
               <Link
                 href="/learn-more"
-                className="rounded-full bg-sky-600 px-3 py-2.5 text-center text-xs font-semibold text-white shadow-lg shadow-sky-200 transition hover:bg-sky-500 sm:px-6 sm:py-3 sm:text-sm"
+                className="rounded-full bg-[linear-gradient(135deg,_#1f5df9_0%,_#284a9f_100%)] px-3 py-2.5 text-center text-xs font-semibold text-white shadow-lg shadow-[#315b8e]/20 transition hover:brightness-110 sm:px-6 sm:py-3 sm:text-sm"
               >
                 Learn More
               </Link>
               <Link
                 href="/contact"
-                className="rounded-full border border-slate-200 bg-white px-3 py-2.5 text-center text-xs font-semibold text-slate-700 transition hover:border-sky-300 hover:text-sky-700 sm:px-6 sm:py-3 sm:text-sm"
+                className="rounded-full border border-slate-200 bg-white px-3 py-2.5 text-center text-xs font-semibold text-slate-700 transition hover:border-[#8aa7c7] hover:text-[#315b8e] sm:px-6 sm:py-3 sm:text-sm"
               >
                 Contact
               </Link>
@@ -72,7 +63,7 @@ export default function Home() {
                   key={letter}
                   className="rounded-xl border border-slate-200 bg-slate-50 p-2 text-center sm:rounded-2xl sm:p-4"
                 >
-                  <div className="text-3xl font-black text-sky-700">{letter}</div>
+                  <div className="text-3xl font-black text-[#315b8e]">{letter}</div>
                   <div className="mt-2 text-[0.65rem] font-medium uppercase tracking-[0.12em] text-slate-500 sm:text-xs sm:tracking-[0.2em]">
                     {accent}
                   </div>
