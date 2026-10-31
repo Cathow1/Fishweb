@@ -29,8 +29,11 @@ export default function LearnMorePage() {
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_hsla(224,80%,51%,0.12),_transparent_30%),linear-gradient(135deg,#f1f5f9_0%,#e8eef6_42%,#f8fafc_100%)] text-slate-800">
-      <div className="mx-auto max-w-6xl px-5 py-8 sm:px-8 sm:py-12 lg:px-10">
-        <SiteHeader showHomeLink className="mb-8 sm:mb-10" />
+      <div className="mx-auto max-w-6xl px-5 pb-8 sm:px-8 sm:pb-12 lg:px-10">
+        <SiteHeader
+          showHomeLink
+          className="mb-4 rounded-xl bg-white/90 px-3 py-2 shadow-sm sm:mb-5 sm:px-5 sm:py-3"
+        />
 
         <section className="grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] items-center gap-3 sm:gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
           <div className="min-w-0">
@@ -54,7 +57,7 @@ export default function LearnMorePage() {
                 Back Home
               </Link>
               <Link
-                href="/contact"
+                href="/#contact"
                 className="rounded-full border border-slate-200 bg-white px-2 py-3 text-center text-xs font-semibold text-slate-700 transition hover:border-[#8aa7c7] hover:text-[#315b8e] sm:px-6 sm:text-sm"
               >
                 Join the Journey
@@ -90,39 +93,6 @@ export default function LearnMorePage() {
           </div>
         </section>
 
-        <section className="mt-10 sm:mt-14">
-          <div className="mb-8 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#315b8e] sm:text-sm sm:tracking-[0.35em]">
-              Our mission
-            </p>
-            <h2 className="mt-4 text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">
-              Grow with Christ. Learn. Share. Lead.
-            </h2>
-          </div>
-
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
-            <div className="rounded-[1.5rem] border border-slate-200 bg-white/75 p-5 shadow-sm sm:rounded-[2rem] sm:p-6">
-              <div className="mb-4 text-xl font-black text-[#315b8e]">1. Grow</div>
-              <p className="text-slate-600 leading-7">
-                (sample sample sample0)
-              </p>
-            </div>
-
-            <div className="rounded-[1.5rem] border border-slate-200 bg-white/75 p-5 shadow-sm sm:rounded-[2rem] sm:p-6">
-              <div className="mb-4 text-xl font-black text-[#315b8e]">2. Learn</div>
-              <p className="text-slate-600 leading-7">
-               (sample sample sample)
-              </p>
-            </div>
-
-            <div className="rounded-[1.5rem] border border-slate-200 bg-white/75 p-5 shadow-sm sm:rounded-[2rem] sm:p-6">
-              <div className="mb-4 text-xl font-black text-[#315b8e]">3. Fish</div>
-              <p className="text-slate-600 leading-7">
-                (sample sapmple sample)
-              </p>
-            </div>
-          </div>
-        </section>
       </div>
     </main>
   );
