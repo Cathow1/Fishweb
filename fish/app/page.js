@@ -73,15 +73,9 @@ export default function Home() {
 
         <nav aria-label="Explore F.I.S.H" className="grid gap-3 py-6 sm:gap-4 sm:py-8">
           <Link
-            href="/learn-more"
-            className="flex min-h-28 items-center justify-center rounded-xl border border-[#315b8e]/70 bg-white/75 px-5 py-6 text-center text-sm font-semibold uppercase tracking-wide text-slate-700 shadow-sm transition hover:border-[#315b8e] hover:bg-[#eaf1ff] hover:text-[#315b8e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1f5df9] sm:min-h-36 sm:text-base"
-          >
-            About Us
-          </Link>
-          <Link
             id="fish-in-action"
             href="#fish-values"
-            className="flex min-h-28 scroll-mt-24 items-center justify-center rounded-xl border border-[#315b8e]/70 bg-white/75 px-5 py-6 text-center text-sm font-semibold uppercase tracking-wide text-slate-700 shadow-sm transition hover:border-[#315b8e] hover:bg-[#eaf1ff] hover:text-[#315b8e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1f5df9] sm:min-h-36 sm:text-base"
+            className="flex min-h-28 scroll-mt-24 items-center justify-center px-5 py-6 text-center text-sm font-semibold uppercase tracking-wide text-slate-700 transition hover:text-[#315b8e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1f5df9] sm:min-h-36 sm:text-base"
           >
             F.I.S.H in Action
           </Link>

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function FishLogo({ className = "" }) {
   return (
     <Image
-      src="/logo_fish2.png"
+      src="/logo_fish3.png"
       alt="Fish logo"
       width={422}
       height={359}
