@@ -1,0 +1,24 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Bible logo</title>
+  <desc id="desc">An open bible</desc>
+  <defs>
+    <linearGradient id="cover" x1="20" y1="40" x2="180" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#315b8e"/>
+      <stop offset="1" stop-color="#1f3f73"/>
+    </linearGradient>
+    <linearGradient id="page" x1="40" y1="70" x2="160" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eaf1ff"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="#ffffff" fill-opacity="0.7" stroke="#315b8e" stroke-opacity="0.15" stroke-width="2"/>
+  <g transform="translate(0,-14)">
+    <path d="M34 86c20-10 44-10 66 0v74c-22-10-46-10-66 0V86Z" fill="url(#cover)"/>
+    <path d="M166 86c-20-10-44-10-66 0v74c22-10 46-10 66 0V86Z" fill="url(#cover)"/>
+    <path d="M44 94c16-8 36-8 52 0v58c-16-8-36-8-52 0V94Z" fill="url(#page)"/>
+    <path d="M156 94c-16-8-36-8-52 0v58c16-8 36-8 52 0V94Z" fill="url(#page)"/>
+    <path d="M100 86v74" stroke="#315b8e" stroke-width="3" stroke-linecap="round"/>
+    <path d="M54 108h32M54 120h32M54 132h24" stroke="#8aa7c7" stroke-width="3" stroke-linecap="round"/>
+    <path d="M114 108h32M114 120h32M114 132h24" stroke="#8aa7c7" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
