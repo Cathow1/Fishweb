@@ -47,16 +47,20 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mx-auto w-full max-w-md rounded-2xl border border-slate-200 bg-white/75 p-3 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-sm sm:rounded-[2rem] sm:p-5 max-sm:mx-0 max-sm:justify-self-end max-sm:rounded-xl max-sm:p-2">
+            <div className="mx-auto w-full max-w-md rounded-2xl border border-white/30 bg-white/30 p-3 shadow-[0_8px_32px_rgba(49,91,142,0.18)] ring-1 ring-white/30 backdrop-blur-xl sm:rounded-[2rem] sm:p-5 max-sm:mx-0 max-sm:justify-self-end max-sm:rounded-xl max-sm:p-2">
               <div className="grid grid-cols-2 gap-3 sm:gap-4 max-sm:gap-1.5">
                 {fishValues.map(({ letter, accent }) => (
                   <div
                     key={letter}
-                    className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center sm:rounded-2xl sm:p-5 max-sm:rounded-lg max-sm:px-1 max-sm:py-2"
+                    className="relative overflow-hidden rounded-xl border border-white/30 bg-white/30 p-3 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_8px_20px_rgba(49,91,142,0.12)] backdrop-blur-md sm:rounded-2xl sm:p-5 max-sm:rounded-lg max-sm:px-1 max-sm:py-2"
                   >
-                    <div className="text-3xl font-black text-[#315b8e] sm:text-4xl max-sm:text-xl">{letter}</div>
-                    <div className="mt-1 text-[0.65rem] font-medium uppercase tracking-[0.12em] text-slate-500 sm:mt-2 sm:text-xs sm:tracking-[0.2em] max-sm:mt-0.5 max-sm:text-[0.45rem] max-sm:tracking-[0.08em]">
-                      {accent}
+                    <div className="pointer-events-none absolute -left-6 -top-8 h-16 w-24 rotate-12 rounded-full bg-white/30 blur-xl" />
+                    <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/30 to-transparent" />
+                    <div className="relative">
+                      <div className="text-3xl font-black text-[#315b8e] drop-shadow-sm sm:text-4xl max-sm:text-xl">{letter}</div>
+                      <div className="mt-1 text-[0.65rem] font-medium uppercase tracking-[0.12em] text-slate-600 sm:mt-2 sm:text-xs sm:tracking-[0.2em] max-sm:mt-0.5 max-sm:text-[0.45rem] max-sm:tracking-[0.08em]">
+                        {accent}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -101,43 +105,47 @@ export default function Home() {
               more about F.I.S.H., this is a good place to start.
             </p>
 
-            <div className="mx-auto mt-3 w-full max-w-xl rounded-xl border border-white/70 bg-white/65 p-2.5 shadow-sm backdrop-blur-sm sm:p-4">
-              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#315b8e] sm:text-xs sm:tracking-[0.25em]">
-                Contact details
-              </p>
-              <h3 className="mt-0.5 text-lg font-black text-slate-900">
-                Contacts
-              </h3>
-              <p className="mt-0.5 text-[0.7rem] leading-4 text-slate-600">
-                Contact information for F.I.S.H.
-              </p>
+            <div className="relative mx-auto mt-3 w-full max-w-xl overflow-hidden rounded-xl border border-white/30 bg-white/30 p-2.5 shadow-[0_8px_32px_rgba(49,91,142,0.18)] ring-1 ring-white/30 backdrop-blur-xl sm:rounded-2xl sm:p-4">
+              <div className="pointer-events-none absolute -left-10 -top-10 h-24 w-40 rotate-12 rounded-full bg-white/30 blur-2xl" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/30 to-transparent" />
+              <div className="relative">
+                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#315b8e] sm:text-xs sm:tracking-[0.25em]">
+                  Contact details
+                </p>
+                <h3 className="mt-0.5 text-lg font-black text-slate-900">
+                  Contacts
+                </h3>
+                <p className="mt-0.5 text-[0.7rem] leading-4 text-slate-600">
+                  Contact information for F.I.S.H.
+                </p>
 
-              <div className="mx-auto mt-2 w-full min-w-0 max-w-[16rem] overflow-hidden rounded-lg border border-slate-200 bg-white">
-                <table className="w-full table-fixed text-left text-[0.65rem]">
-                  <thead className="bg-[#eaf1ff] text-[0.6rem] uppercase tracking-[0.12em] text-[#284a9f]">
-                    <tr>
-                      <th scope="col" className="w-2/5 break-words px-2.5 py-2 font-bold">
-                        Contact
-                      </th>
-                      <th scope="col" className="break-words px-2.5 py-2 font-bold">
-                        Number
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-t border-slate-100">
-                      <th
-                        scope="row"
-                        className="min-w-0 break-words px-2.5 py-2 font-semibold text-slate-800"
-                      >
-                        F.I.S.H.
-                      </th>
-                      <td className="min-w-0 break-words px-2.5 py-2 text-slate-600">
-                        tawagi si achi aleah
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="relative mx-auto mt-2 w-full min-w-0 max-w-[16rem] overflow-hidden rounded-lg border border-white/30 bg-white/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_4px_16px_rgba(49,91,142,0.1)] backdrop-blur-md">
+                  <table className="relative w-full table-fixed text-left text-[0.65rem]">
+                    <thead className="bg-white/30 text-[0.6rem] uppercase tracking-[0.12em] text-[#284a9f]">
+                      <tr>
+                        <th scope="col" className="w-2/5 break-words px-2.5 py-2 font-bold">
+                          Contact
+                        </th>
+                        <th scope="col" className="break-words px-2.5 py-2 font-bold">
+                          Number
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-t border-white/30 bg-white/30">
+                        <th
+                          scope="row"
+                          className="min-w-0 break-words px-2.5 py-2 font-semibold text-slate-800"
+                        >
+                          F.I.S.H.
+                        </th>
+                        <td className="min-w-0 break-words px-2.5 py-2 text-slate-700">
+                          tawagi si achi aleah
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </section>
