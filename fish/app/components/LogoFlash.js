@@ -28,7 +28,7 @@ export default function LogoFlash() {
     document.body.style.overflow = "hidden";
 
     const onWheel = (e) => {
-      if (e.deltaY < 0) dismiss();
+      if (e.deltaY > 0) dismiss();
     };
 
     let touchStartY = null;
@@ -37,7 +37,7 @@ export default function LogoFlash() {
     };
     const onTouchMove = (e) => {
       if (touchStartY === null) return;
-      if (e.touches[0].clientY - touchStartY > 10) dismiss();
+      if (e.touches[0].clientY - touchStartY < -10) dismiss();
     };
 
     window.addEventListener("wheel", onWheel, { passive: true });

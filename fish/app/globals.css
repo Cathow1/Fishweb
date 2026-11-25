@@ -62,7 +62,7 @@ body {
   position: absolute;
   inset: auto 0 0;
   height: 2px;
-  background: linear-gradient(90deg, #1f5df9, #8aa7c7, #1f5df9);
+  background: linear-gradient(90deg, #109FD7, #8DD3F0, #109FD7);
   background-size: 200% 100%;
   content: "";
   animation: header-accent-sweep 1.8s ease-in-out infinite;
@@ -89,6 +89,12 @@ body {
   }
 }
 
+.liquid-glass {
+  background-color: rgb(255 255 255 / 60%);
+  border-color: rgb(255 255 255 / 60%);
+  --tw-ring-color: rgb(255 255 255 / 60%);
+}
+
 .logo-flash {
   position: fixed;
   inset: 0;
@@ -104,7 +110,7 @@ body {
 }
 
 .logo-flash--fade {
-  transform: translateY(100%);
+  transform: translateY(-100%);
   pointer-events: none;
 }
 
@@ -124,8 +130,8 @@ body {
 .logo-flash__bubble {
   position: absolute;
   border-radius: 9999px;
-  background: radial-gradient(circle at 30% 30%, rgba(191, 219, 254, 0.95), rgba(49, 91, 142, 0.35));
-  border: 2px solid rgba(49, 91, 142, 0.25);
+  background: radial-gradient(circle at 30% 30%, rgba(191, 219, 254, 0.95), rgba(16, 159, 215, 0.35));
+  border: 2px solid rgba(16, 159, 215, 0.25);
   pointer-events: none;
 }
 
